@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
-<body>
-    <div class="container mx-auto max-w-[1447px]" data-scroll-container>
+<body id="container">
+    <div class="container mx-auto max-w-[1447px]">
         <section class="header relative z-10" >
             <div class="app-name absolute flex justify-center"
                     data-aos-duration="1500"
@@ -51,7 +51,7 @@
                     data-aos-duration="1800"
                     data-aos-delay="300"
                     data-aos-easing="ease-in-out"
-                    data-aos="flip-left" 
+                    data-aos="fade-up" 
                     src="./assets/images/NINJA.png" 
                     class="absolute top-[400px] right-0 z-10" alt="">
 
@@ -67,8 +67,8 @@
 
         <section class="blood-section text-center relative">
             <img 
-                data-aos-duration="1600"
-                data-aos-delay="200"
+                data-aos-duration="2000"
+                data-aos-delay="500"
                 data-aos="blood-splatter" 
                 src="./assets/images/BLOOD-FX.png" 
                 class="-mt-[300px] relative z-50 -scale-y-125 object-fill scale-125"
@@ -80,14 +80,14 @@
                 class="text-3xl -mt-8"
                 >HIDDEN IN SPILLED BLOOD </div>
             <img
-                data-aos-duration="1600"
-                data-aos-delay="200"
+                data-aos-duration="2000"
+                data-aos-delay="500"
                 data-aos="blood-splatter"  
                 src="./assets/images/BLOOD-FX.png"
                 class="-mt-[95px] relative z-50 rotate-[166.62deg] scale-125 -ml-[15%]" alt="B" />
         </section>
 
-        <section class="shadow-section -mt-[450px] relative ">
+        <section class="shadow-section -mt-[450px] relative" id="fight_section">
             <div class="flex justify-end">
                 <div    
                     class="shadow-bacground relative">
@@ -103,15 +103,11 @@
                     </div>
                 </div>
                 <img 
-                    data-aos-duration="300"
-                    data-aos-delay="800"
-                    data-aos="custom-right"
+                    id="fight_ninja"
                     src="./assets/images/ninja-2.png"
                     class="absolute -left-[128px] top-[560px] z-30 scale-[150%] -scale-x-[150%] w-1/2" alt="" />
                 <img 
-                    data-aos-duration="300"
-                    data-aos-delay="800"
-                    data-aos="custom-left"
+                    id="fight_demon"
                     src="./assets/images/DEMON.png" 
                     class="absolute -right-[128px] top-[630px] z-30 w-1/2 scale-[150%]"
                     alt="" />
@@ -210,8 +206,8 @@
                     data-aos-delay="300"
                     data-aos-easing="ease-in-out"
                     data-aos="fade-down"  
-                    src="./assets/images/fireball_png_v01.png" 
-                    class="z-30 absolute -top-[500px] right-0" alt="">
+                    src="./assets/images/flame.gif" 
+                    class="z-30 absolute -top-[530px] right-0" alt="">
             </div>
         </section>
 
