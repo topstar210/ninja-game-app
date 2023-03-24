@@ -1,0 +1,294 @@
+@import url('https://fonts.cdnfonts.com/css/audiowide');
+@import url('https://fonts.cdnfonts.com/css/abel');
+
+:root {
+    background-color: #000;
+    color: #EBEBEB;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    font-family: 'Audiowide', sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    color: #EBEBEB;
+    background: #000;
+    border: 0
+}
+
+.font-fam1 {
+    font-family: abel;
+}
+
+
+/* splash page */
+.splash-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.loading-percent {
+    text-align: center;
+    font-size: 36px;
+    margin-top: -100px;
+    font-weight: 700;
+}
+
+/* splash page */
+
+/* start page */
+.start-page {
+    background: url('../images/backgound-startpg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.start-page .cover-card {
+    width: 100%;
+    height: 100%;
+    background: url('../images/card-startpg.png');
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.start-page .enter-cover {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+
+.start-page .start-title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+    padding-bottom: 10px;
+}
+
+.start-page #enter_game {
+    width: 264px;
+    height: 101px;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 40px;
+    font-family: 'Abel';
+    background: url('../images/btn-bg-1.png');
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* landing page */
+.intro-section {
+    background: url("../images/BACKGROUND-2.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.shadow-bacground {
+    background: url("../images/BACKGROUND-3.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.ninja-env {
+    background: url("../images/SHRINE.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.ninja-env-2 {
+    background: url("../images/SHRINE1.png");
+    background-position: center;
+    background-size: 95% 93%;
+}
+
+.ninja-env-3 {
+    background: url("../images/NINJA-TREE.png");
+    background-position: right;
+    background-size: 85% 70%;
+    background-repeat: no-repeat;
+}
+
+.last-section-title {
+    background: url("../images/Vector-6.png");
+    background-size: 100% 100%;
+    width: 740px;
+    height: 143px;
+    vertical-align: middle;
+}
+
+.last-section-intro {
+    background: url("../images/Vector-7.png");
+    background-size: 100% 100%;
+    width: 890px;
+    height: 505px;
+}
+
+/* .blood-splatter {
+    animation: splat 1s ease-in-out forwards;
+} */
+@keyframes splat {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+[data-aos="blood-splatter"] {
+    transition-property: opacity, splat;
+}
+
+[data-aos="blood-splatter"].aos-animate {
+    animation: splat 2s ease-in-out forwards;
+}
+
+[data-aos="custom-right"] {
+    left: -500px !important;
+    transition-property: left,
+}
+
+[data-aos="custom-right"].aos-animate {
+    left: -128px !important;
+}
+
+[data-aos="custom-left"] {
+    right: -550px !important;
+    transition-property: right,
+}
+
+[data-aos="custom-left"].aos-animate {
+    right: -128px !important;
+}
+
+.cloud-animation {
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: wave;
+    -webkit-animation-duration: 3s;
+}
+
+@-webkit-keyframes wave {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 50px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+
+.cloud-animation-2 {
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: wave2;
+    -webkit-animation-duration: 3s;
+}
+
+@-webkit-keyframes wave2 {
+    0% {
+        left: -590px;
+    }
+
+    50% {
+        left: -620px;
+    }
+
+    100% {
+        left: -590px;
+    }
+}
+
+
+.cloud-animation-3 {
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: wave3;
+    -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes wave3 {
+    0% {
+        left: -480px;
+    }
+
+    50% {
+        left: -400px;
+    }
+
+    100% {
+        left: -480px;
+    }
+}
+
+
+.cloud-animation-4 {
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: wave4;
+    -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes wave4 {
+    0% {
+        right: -400px;
+    }
+
+    50% {
+        right: -350px;
+    }
+
+    100% {
+        right: -400px;
+    }
+}
