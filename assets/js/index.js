@@ -38,6 +38,10 @@ document.addEventListener('scroll', function (event) {
 
         fight_ninjaObj.style.left = itemPosition + "px";
         fight_demonObj.style.right = itemPosition + "px";
+        
+        let scale = 1.7 - ((currentScrollTop - 1700) * 0.0015) / 2;
+        fight_ninjaObj.style.transform = `scale(${scale*-1}, ${scale})`;
+        fight_demonObj.style.transform = `scale(${scale})`;
     } else if(currentScrollTop > 2500 && currentScrollTop < 3000) {
         let itemPosition = ((currentScrollTop - 2500) * 0.5 + 128) * -1;
         fight_ninjaObj.style.left = itemPosition + "px";
