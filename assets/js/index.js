@@ -7,6 +7,11 @@ const first_ninjaObj = document.getElementById("first_ninja");
 const blood_2Obj = document.getElementById("blood_2");
 const fight_ninjaObj = document.getElementById("fight_ninja");
 const fight_demonObj = document.getElementById("fight_demon");
+const cloud1 = document.getElementById("cloud1");
+const cloud2 = document.getElementById("cloud2");
+const cloud3 = document.getElementById("cloud3");
+const cloud4 = document.getElementById("cloud4");
+const cloud5 = document.getElementById("cloud5");
 
 // Add a scroll event listener to the element
 document.addEventListener('scroll', function (event) {
@@ -39,14 +44,12 @@ document.addEventListener('scroll', function (event) {
         fight_demonObj.style.right = itemPosition + "px";
         
         let scale = 1.5 - (currentScrollTop - 2500) * 0.0015;
-        console.log("currentScrollTop", scale)
         fight_ninjaObj.style.transform = `scale(${scale*-1}, ${scale})`;
         fight_demonObj.style.transform = `scale(${scale})`;
     }
 
     calcForeGroundNinjaPos();
 
-    // console.log(scrollFlag, currentScrollTop)
     if(currentScrollTop>1750 && currentScrollTop < 2550){
         blood_2Obj.style.display = "inline";
     } else {
@@ -61,6 +64,25 @@ document.addEventListener('scroll', function (event) {
     //     } else {
     //     }
     // }
+
+    if(currentScrollTop>2275 && currentScrollTop < 2925){
+        const posLen = currentScrollTop - 2275;
+        let cloud1_pos = 1250 - posLen;
+        let cloud2_pos = 1300 - posLen * 2;
+        let cloud3_pos = 650 - posLen + 20;
+        cloud1.style.left = cloud1_pos * -1 + "px";
+        cloud2.style.left = cloud2_pos + "px";
+        // cloud3.style.left = cloud3_pos + "px";
+    }
+
+    if(currentScrollTop > 3600 && currentScrollTop < 4050) {
+        const posLen = currentScrollTop - 3600;
+        let cloud4_pos = 920 - posLen;
+        let cloud5_pos = 800 - posLen;
+        console.log(cloud4_pos, cloud5_pos)
+        cloud4.style.left = cloud4_pos * -1 + "px";
+        cloud5.style.right = cloud5_pos * -1 + "px";
+    }
 });
 
 
