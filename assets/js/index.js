@@ -65,24 +65,24 @@ document.addEventListener('scroll', function (event) {
     //     }
     // }
 
-    if(currentScrollTop>2275 && currentScrollTop < 2925){
-        const posLen = currentScrollTop - 2275;
-        let cloud1_pos = 1250 - posLen;
-        let cloud2_pos = 1300 - posLen * 2;
-        let cloud3_pos = 650 - posLen + 20;
-        cloud1.style.left = cloud1_pos * -1 + "px";
-        cloud2.style.left = cloud2_pos + "px";
-        // cloud3.style.left = cloud3_pos + "px";
-    }
+    // if(currentScrollTop>2275 && currentScrollTop < 2925){
+    //     const posLen = currentScrollTop - 2275;
+    //     let cloud1_pos = 1250 - posLen;
+    //     let cloud2_pos = 1300 - posLen * 2;
+    //     let cloud3_pos = 650 - posLen + 20;
+    //     cloud1.style.left = cloud1_pos * -1 + "px";
+    //     cloud2.style.left = cloud2_pos + "px";
+    //     // cloud3.style.left = cloud3_pos + "px";
+    // }
 
-    if(currentScrollTop > 3600 && currentScrollTop < 4050) {
-        const posLen = currentScrollTop - 3600;
-        let cloud4_pos = 920 - posLen;
-        let cloud5_pos = 800 - posLen;
-        console.log(cloud4_pos, cloud5_pos)
-        cloud4.style.left = cloud4_pos * -1 + "px";
-        cloud5.style.right = cloud5_pos * -1 + "px";
-    }
+    // if(currentScrollTop > 3600 && currentScrollTop < 4050) {
+    //     const posLen = currentScrollTop - 3600;
+    //     let cloud4_pos = 920 - posLen;
+    //     let cloud5_pos = 800 - posLen;
+    //     console.log(cloud4_pos, cloud5_pos)
+    //     cloud4.style.left = cloud4_pos * -1 + "px";
+    //     cloud5.style.right = cloud5_pos * -1 + "px";
+    // }
 });
 
 

@@ -173,10 +173,6 @@ button {
 } */
 @keyframes splat {
     0% {
-        scale: 1.25;
-    }
-
-    50% {
         scale: 3;
     }
     100% {
@@ -189,7 +185,7 @@ button {
 }
 
 [data-aos="blood-splatter"].aos-animate {
-    animation: splat 0.3s ease-in-out forwards;
+    animation: splat 0.2s ease-in-out forwards;
 }
 
 [data-aos="custom-right"] {
@@ -218,15 +214,15 @@ button {
 
 @-webkit-keyframes wave {
     0% {
-        left: 0px;
+        bottom: 35px;
     }
 
     50% {
-        left: 50px;
+        bottom: 0px;
     }
 
     100% {
-        left: 0px;
+        bottom: 35px;
     }
 }
 
@@ -239,15 +235,15 @@ button {
 
 @-webkit-keyframes wave2 {
     0% {
-        left: -590px;
+        bottom: 50px;
     }
 
     50% {
-        left: -620px;
+        bottom: 90px;
     }
 
     100% {
-        left: -590px;
+        bottom: 50px;
     }
 }
 
@@ -255,20 +251,18 @@ button {
 .cloud-animation-3 {
     -webkit-animation: linear infinite;
     -webkit-animation-name: wave3;
-    -webkit-animation-duration: 5s;
+    -webkit-animation-duration: 3s;
 }
 
 @-webkit-keyframes wave3 {
     0% {
-        left: -480px;
+        top: 465px;
     }
-
     50% {
-        left: -400px;
+        top: 495px;
     }
-
     100% {
-        left: -480px;
+        top: 465px;
     }
 }
 
@@ -281,14 +275,12 @@ button {
 
 @-webkit-keyframes wave4 {
     0% {
-        right: -400px;
+        top: -46px;
     }
-
     50% {
-        right: -350px;
+        top: -76px;
     }
-
     100% {
-        right: -400px;
+        top: -46px;
     }
 }
