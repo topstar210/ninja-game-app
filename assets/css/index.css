@@ -185,7 +185,7 @@ button {
 }
 
 [data-aos="blood-splatter"].aos-animate {
-    animation: splat 0.2s ease-in-out forwards;
+    animation: splat 0.1s ease-in-out forwards;
 }
 
 [data-aos="custom-right"] {

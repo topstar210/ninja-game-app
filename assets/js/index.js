@@ -1,6 +1,5 @@
 let scrollFlag = "downwards";
 const scrollSpeed = 0.77;
-const maxPosition = -128;
 let previousScrollTop = 0;
 const foregroundObj = document.getElementById("foreground");
 const first_ninjaObj = document.getElementById("first_ninja");
@@ -31,25 +30,28 @@ document.addEventListener('scroll', function (event) {
     
     // fighting section animation  ====
     if (currentScrollTop > 1700 && currentScrollTop < 2300) {
-        const stepPosition = (currentScrollTop - 1700) * scrollSpeed;
-
-        let itemPosition = -520 + stepPosition;
-        itemPosition = itemPosition >= maxPosition ? maxPosition : itemPosition;
+        let itemPosition = (500 - (currentScrollTop-1700)) + 128
+        itemPosition = itemPosition < 100 ? 100 : itemPosition;
+        itemPosition = itemPosition * -1;
 
         fight_ninjaObj.style.left = itemPosition + "px";
         fight_demonObj.style.right = itemPosition + "px";
-        
-        let scale = 1.7 - ((currentScrollTop - 1700) * 0.0015) / 2;
+
+        let scale = (currentScrollTop-1700) * 0.002;
+        scale = scale > 1 ? 1 : scale;
+        scale = 2.5 - scale;
         fight_ninjaObj.style.transform = `scale(${scale*-1}, ${scale})`;
         fight_demonObj.style.transform = `scale(${scale})`;
-    } else if(currentScrollTop > 2500 && currentScrollTop < 3000) {
-        let itemPosition = ((currentScrollTop - 2500) * 0.5 + 128) * -1;
+    } else if(currentScrollTop > 2700 && currentScrollTop < 3200) {
+        let itemPosition = (currentScrollTop - 2500) * 0.5;
+        itemPosition = itemPosition > 100 ? 100: itemPosition;
+        itemPosition = itemPosition * -1;
         fight_ninjaObj.style.left = itemPosition + "px";
         fight_demonObj.style.right = itemPosition + "px";
         
-        let scale = 1.5 - (currentScrollTop - 2500) * 0.0015;
-        fight_ninjaObj.style.transform = `scale(${scale*-1}, ${scale})`;
-        fight_demonObj.style.transform = `scale(${scale})`;
+        // let scale = 1.5 - (currentScrollTop - 2500) * 0.0015;
+        // fight_ninjaObj.style.transform = `scale(${scale*-1}, ${scale})`;
+        // fight_demonObj.style.transform = `scale(${scale})`;
     }
 
     calcForeGroundNinjaPos();
@@ -73,7 +75,7 @@ document.addEventListener('scroll', function (event) {
         const posLen = currentScrollTop - 2275;
         let cloud1_pos = 1250 - posLen;
         let cloud2_pos = 1300 - posLen * 2;
-        let cloud3_pos = 650 - posLen + 20;
+        // let cloud3_pos = 650 - posLen + 20;
         cloud1.style.left = cloud1_pos * -1 + "px";
         cloud2.style.left = cloud2_pos + "px";
         // cloud3.style.left = cloud3_pos + "px";
@@ -83,7 +85,6 @@ document.addEventListener('scroll', function (event) {
         const posLen = currentScrollTop - 3600;
         let cloud4_pos = 920 - posLen;
         let cloud5_pos = 800 - posLen;
-        console.log(cloud4_pos, cloud5_pos)
         cloud4.style.left = cloud4_pos * -1 + "px";
         cloud5.style.right = cloud5_pos * -1 + "px";
     }
