@@ -90,9 +90,9 @@ document.addEventListener('scroll', function (event) {
         cloud5.style.right = cloud5_pos * -1 + "px";
     }
 
-    if(currentScrollTop > 4950 && currentScrollTop < 5630) {
-        let posLen = currentScrollTop - 4950;
-        posLen = posLen * 0.84 * -1;
+    if(currentScrollTop > 5300 && currentScrollTop < 5580) {
+        let posLen = currentScrollTop - 5300;
+        posLen = posLen * 1.78 * -1;
         fire_flame.style.top = posLen + "px";
     }
 });
