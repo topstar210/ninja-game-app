@@ -88,6 +88,12 @@ document.addEventListener('scroll', function (event) {
         let cloud5_pos = 800 - posLen;
         cloud4.style.left = cloud4_pos * -1 + "px";
         cloud5.style.right = cloud5_pos * -1 + "px";
+    } else if(currentScrollTop > 4227 && currentScrollTop < 4527) {
+        const posLen = currentScrollTop - 4227;
+        let cloud4_pos = 470 + posLen;
+        let cloud5_pos = 350 + posLen;
+        cloud4.style.left = cloud4_pos * -1 + "px";
+        cloud5.style.right = cloud5_pos * -1 + "px";
     }
 
     if(currentScrollTop > 5300 && currentScrollTop < 5580) {
