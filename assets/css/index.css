@@ -156,16 +156,16 @@ button {
 .last-section-title {
     background: url("../images/Vector-6.png");
     background-size: 100% 100%;
-    width: 740px;
-    height: 143px;
     vertical-align: middle;
 }
 
 .last-section-intro {
     background: url("../images/Vector-7.png");
     background-size: 100% 100%;
-    width: 890px;
-    height: 505px;
+}
+
+footer{
+    font-family: abel;
 }
 
 .blood-splatter {
