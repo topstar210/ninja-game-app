@@ -28,7 +28,16 @@ document.addEventListener('scroll', function (event) {
     }
     // Update the previousScrollTop variable
     previousScrollTop = currentScrollTop;
+
+    calcForeGroundNinjaPos();
     
+    if(currentScrollTop>1550 && currentScrollTop < 2550){
+        blood_2Obj.style.display = "block";
+    } else {
+        blood_2Obj.style.display = "none";
+    }
+
+
     // fighting section animation  ====
     if (currentScrollTop > 1700 && currentScrollTop < 2300) {
         let itemPosition = (500 - (currentScrollTop-1700)) + 128
@@ -49,28 +58,8 @@ document.addEventListener('scroll', function (event) {
         itemPosition = itemPosition * -1;
         fight_ninjaObj.style.left = itemPosition + "px";
         fight_demonObj.style.right = itemPosition + "px";
-        
-        // let scale = 1.5 - (currentScrollTop - 2500) * 0.0015;
-        // fight_ninjaObj.style.transform = `scale(${scale*-1}, ${scale})`;
-        // fight_demonObj.style.transform = `scale(${scale})`;
     }
 
-    calcForeGroundNinjaPos();
-
-    if(currentScrollTop>1750 && currentScrollTop < 2550){
-        blood_2Obj.style.display = "inline";
-    } else {
-        blood_2Obj.style.display = "none";
-    }
-
-    // let foregroundDeltaY = 0;
-    // if(currentScrollTop >= 390) {
-    //     if(foregroundDeltaY <= 600) {
-    //         foregroundDeltaY += currentScrollTop-390; 
-    //         document.scrollingElement.scrollTo(390, 390);
-    //     } else {
-    //     }
-    // }
 
     if(currentScrollTop>2275 && currentScrollTop < 2925){
         const posLen = currentScrollTop - 2275;
@@ -107,19 +96,18 @@ document.addEventListener('scroll', function (event) {
 const calcForeGroundNinjaPos = () => {
     const currentScrollTop = document.scrollingElement.scrollTop;
     // first section ninja ---
-    let ninjaTop = 900-currentScrollTop;
-    if(ninjaTop >= 400) {
+    let ninjaTop = 1150-currentScrollTop;
+    if(ninjaTop >= 680) {
         first_ninjaObj.style.top = `${ninjaTop}px`;
     } else {
-        first_ninjaObj.style.top = `400px`;
+        first_ninjaObj.style.top = `690px`;
     }
     
-    const foregroundSpeed = 1;
-    let foregroundTop = 1160-currentScrollTop*foregroundSpeed;
-    if(foregroundTop >= 560) {
+    let foregroundTop = 1360-currentScrollTop;
+    if(foregroundTop >= 660) {
         foregroundObj.style.top = `${foregroundTop}px`;
     } else {
-        foregroundObj.style.top = `560px`;
+        foregroundObj.style.top = `660px`;
     }
 }
 
@@ -130,5 +118,5 @@ const calcForeGroundNinjaPos = () => {
     });
 
     calcForeGroundNinjaPos();
-    blood_2Obj.style.display = "none";
+    // blood_2Obj.style.display = "none";
 })();
