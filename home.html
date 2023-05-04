@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nina-game</title>
+
+    <!-- for modal -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+</head>
+
+<body>
+    <div class="flex justify-center ">
+        <div class="h-screen w-full max-w-[1551px] px-8">
+            <!-- header -->
+            <div class="flex justify-between items-center">
+                <a href="">
+                    <img src="./assets/images/kagedo-light-h1.png" alt="" />
+                </a>
+                <div class="flex justify-between">
+                    <button class="uppercase font-fam1 bg-white text-black rounded-full px-3 mx-3">Connect Your
+                        Wallet</button>
+                    <button class="rounded-full border border-white p-1">
+                        <img src="./assets/images/Sound ON.png" width="16" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <!-- body -->
+            <div class="h-[calc(100vh-110px)]">
+                <div class="flex">
+                    <div class="w-1/2 font-fam1 py-20 px-10 relative">
+                        <img src="./assets/images/SHRINE1.png" class="opacity-20" alt="" />
+                        <div class="absolute top-0 left-0 w-full h-full text-xl flex items-center z-50">
+                            <div class="w-full my-auto">
+                                <div class="flex my-3">
+                                    <div class="text-right w-1/2 px-5">UNSTAKED BALANCE</div>
+                                    <div class="w-1/2 px-5">00.304 FACE1</div>
+                                </div>
+                                <div class="flex my-3">
+                                    <div class="text-right w-1/2 px-5">REWARDS</div>
+                                    <div class="w-1/2 px-5">253,42 FACE1 Per Day</div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <div class="my-10">
+                                        <button
+                                            data-modal-target="stakeModal" data-modal-toggle="stakeModal"
+                                            class="stake_btn bg-white text-black rounded-full px-5 mx-3">STAKE</button>
+                                        <button
+                                            data-modal-target="stakeModal" data-modal-toggle="stakeModal"
+                                            class="unstake_btn bg-black text-white border border-[rgba(0, 0, 0, 0.71)] rounded-full px-5 mx-3">UNSTAKE</button>
+                                    </div>
+                                </div>
+                                <div class="text-center bg-black w-1/3 mx-auto py-3 mt-20">
+                                    <div>UNCLAIMED REWARDS</div>
+                                    <div>12.3456 FACE1</div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <button
+                                        class="claim_btn uppercase font-fam1 text-3xl bg-white text-black rounded-full px-10 py-2 my-10">
+                                        claim rewards</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/2 relative flex justify-end">
+                        <img src="./assets/images/ninja-bg.png" class="absolute top-32 -left-32 scale-125" alt="" />
+                        <div class="text-xl relative z-50">
+                            <div class="font-fam1 uppercase mb-2">balance</div>
+                            <div class="border border-[rgba(0, 0, 0, 0.71)] rounded-xl px-8 py-4 mb-8">
+                                <div class="flex justify-between items-center">
+                                    <div class="text-2xl w-28">FACE1</div>
+                                    <div class="font-fam1">12.3456</div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-2xl w-28">LP</div>
+                                    <div class="font-fam1">0.00009</div>
+                                </div>
+                            </div>
+                            <div class="font-fam1 uppercase mb-2">STAKED LP</div>
+                            <div class="border border-[rgba(0, 0, 0, 0.71)] rounded-xl px-8 py-4 mb-8">
+                                <div class="flex justify-between items-center">
+                                    <div class="text-2xl w-28">TOTAL</div>
+                                    <div class="font-fam1">12.3456</div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-2xl w-28">MY</div>
+                                    <div class="font-fam1">0.00009</div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div class="w-1/2 text-center">
+                                    <div class="uppercase font-fam1 text-lg mb-2">my pool share</div>
+                                    <div
+                                        class="text-xl border border-[rgba(0, 0, 0, 0.71)] rounded-full flex justify-center items-center h-24 w-24 mx-auto">
+                                        100%</div>
+                                </div>
+                                <div class="w-1/2 text-center">
+                                    <div class="uppercase font-fam1 text-lg mb-2">my rewards</div>
+                                    <div class="
+                                        text-xl 
+                                        border border-[rgba(0, 0, 0, 0.71)] 
+                                        rounded-full 
+                                        flex justify-center items-center 
+                                        h-24 w-24 
+                                        mx-auto
+                                        color-changer">3.002</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-bt-gradiant absolute bottom-0 left-0 w-full h-[calc(50vh-130px)]"></div>
+                <!-- message -->
+                <div class="message absolute bottom-0 left-0 z-50 flex justify-center w-full py-7 cursor-pointer hidden">
+                    <div class="flex items-center">
+                        <div class="px-5 text-green-500"><span class="text-2xl">SUCCESS!</span> Reward Claimed</div>
+                        <div>Transaction Id: 1234567890wertyuiopasdfgjkllxcvbnm1234567890</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main modal -->
+            <div id="stakeModal" tabindex="-1" aria-hidden="true"
+                class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-2xl max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative shadow bg-modal w-[800px] h-[512px] flex items-center justify-center">
+                        <div class="w-2/3">
+                            <div class="text-right mb-3 font-fam1 text-xl">BALANCE   <span class="ml-5">12.393</span></div>
+                            <div class="relative">
+                                <input type="number" class="bg-[#161111] border-0 h-[87px] text-2xl w-full font-fam1" value="0.0" />
+                                <div class="rounded-full w-[79px] h-[79px] bg-black flex justify-center items-center text-2xl absolute right-1 top-1 z-50">LP</div>
+                            </div>
+                            <div class="flex justify-around px-10 py-5">
+                                <button class="text-2xl">25%</button>
+                                <button class="text-2xl">50%</button>
+                                <button class="text-2xl">75%</button>
+                                <button class="text-2xl">MAX</button>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="modal_btn uppercase font-fam1 text-3xl bg-white text-black rounded-full px-10 py-2">
+                                    UNSTAKE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-name uppercase text-8xl absolute bottom-10 left-10">STAKE</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    document.querySelector(".claim_btn").addEventListener("click", () => {
+        document.querySelector(".message").style.display = "flex";
+    })
+    document.querySelector(".message").addEventListener("click", () => {
+        document.querySelector(".message").style.display = "none";
+    })
+    
+    document.querySelector(".stake_btn").addEventListener("click", () => {
+        document.querySelector(".modal-name").innerHTML = "stake";
+        document.querySelector(".modal_btn").innerHTML = "stake";
+    })
+    document.querySelector(".unstake_btn").addEventListener("click", () => {
+        document.querySelector(".modal-name").innerHTML = "unstake";
+        document.querySelector(".modal_btn").innerHTML = "unstake";
+    })
+</script>
+
+</html>

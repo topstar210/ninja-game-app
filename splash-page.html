@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nina-game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div class="flex justify-center ">
+        <div class="h-screen w-full max-w-[1551px] px-8">
+            <!-- header -->
+            <div class="flex justify-between items-center">
+                <a href="">
+                    <img src="./assets/images/kagedo-light-h1.png" alt="" />
+                </a>
+                <div class="flex justify-between">
+                    <button class="uppercase font-fam1 bg-white text-black rounded-full px-3 mx-3">Connect Your Wallet</button>
+                    <button class="rounded-full border border-white p-1">
+                        <img src="./assets/images/Sound ON.png" width="16" alt="" >
+                    </button>
+                </div>
+            </div>
+            <!-- body -->
+            <div class="bg-home1 bg-center bg-no-repeat h-[calc(100vh-110px)] flex items-center justify-center relative">
+                <img src="./assets/images/cloud-5-4.png" class="cloud_lt absolute -top-28 left-0 w-2/3  z-[60]" alt="" />
+                <img src="./assets/images/cloud-5-1.png" class="cloud_rt absolute -top-28 right-0 w-2/3  z-[60]" alt="" />
+                <img src="./assets/images/cloud-2-1.png" class="cloud_rt absolute bottom-0 z-[60]" alt="" />
+                <img src="./assets/images/cloud-3-1.png" class="cloud_lt absolute bottom-0 -left-10 z-[60] w-4/5" alt="" />
+
+                <div class="absolute top-0 left-0 w-5/12">
+                    <img src="./assets/images/cloud-5-1.png" class="-scale-100 relative cloud-animation-1" alt="" />
+                </div>
+                <div class="text-center text-4xl relative z-50">
+                    <h1>CONNECT YOUR ETHERUEM ACCOUNT <br /> TO ACCESS THE SHRINE</h1>
+                    <button class="connect_btn uppercase font-fam1 text-3xl bg-white text-black rounded-full px-10 py-2 my-10">connect your wallet</button>
+                </div>
+                <div class="absolute top-[calc(50vh-130px)] right-0 w-7/12">
+                    <img src="./assets/images/cloud-5-1.png" class="relative cloud-animation" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.querySelector(".connect_btn").addEventListener("click", () => {
+        window.location.href="./home.html";
+    })
+</script>
+
+</html> 
