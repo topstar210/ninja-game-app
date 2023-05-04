@@ -36,7 +36,6 @@ body {
 button {
     color: #EBEBEB;
     background: #000;
-    border: 0
 }
 
 .font-fam1 {
@@ -214,20 +213,20 @@ footer{
 
 @-webkit-keyframes wave {
     0% {
-        bottom: 35px;
+        left: 35px;
     }
 
     50% {
-        bottom: 0px;
+        left: 0px;
     }
 
     100% {
-        bottom: 35px;
+        left: 35px;
     }
 }
 
 
-.cloud-animation-2 {
+.cloud-animation-1 {
     -webkit-animation: linear infinite;
     -webkit-animation-name: wave2;
     -webkit-animation-duration: 3s;
@@ -235,52 +234,86 @@ footer{
 
 @-webkit-keyframes wave2 {
     0% {
-        bottom: 50px;
+        left: -35px;
     }
 
     50% {
-        bottom: 90px;
+        left: 0px;
     }
 
     100% {
-        bottom: 50px;
+        left: -35px;
     }
 }
 
 
-.cloud-animation-3 {
-    -webkit-animation: linear infinite;
-    -webkit-animation-name: wave3;
-    -webkit-animation-duration: 3s;
+/*splash*/
+.bg-home1{
+    background: url("../images/home1.png");
+}
+.bg-bt-gradiant{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 56.77%);
+}
+.bg-modal{
+    background: url("../images/Vector-7.png");
+    background-size: cover;
+    background-position: center;
 }
 
-@-webkit-keyframes wave3 {
+[type=number]:focus{
+    box-shadow:none !important;
+}
+
+.color-changer {
+    animation: Color 2s linear infinite;
+    -webkit-animation: Color 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes Color {
     0% {
-        top: 465px;
+        color: #fff;
     }
     50% {
-        top: 495px;
+        color: green;
     }
     100% {
-        top: 465px;
+        color: #fff;
     }
 }
 
-
-.cloud-animation-4 {
-    -webkit-animation: linear infinite;
-    -webkit-animation-name: wave4;
-    -webkit-animation-duration: 5s;
+.cloud_lt{
+    animation-name: fadeInRight,hide;
+    animation-duration: 1s;
+    animation-delay: 0s,3s;
+    animation-fill-mode: both;
 }
-
-@-webkit-keyframes wave4 {
+@keyframes fadeInRight {
     0% {
-        top: -46px;
+      opacity: 0;
     }
-    50% {
-        top: -76px;
-    }
+  }
+  @keyframes hide {
     100% {
-        top: -46px;
+      opacity: 0;
+      transform: translate3d(-800px, 0, 0);
     }
+  }
+
+  
+.cloud_rt{
+    animation-name: fadeInLeft,rt_hide;
+    animation-duration: 1s;
+    animation-delay: 0s,3s;
+    animation-fill-mode: both;
 }
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+    }
+  }
+  @keyframes rt_hide {
+    100% {
+      opacity: 0;
+      transform: translate3d(1300px, 0, 0);
+    }
+  }
