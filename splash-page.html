@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="flex justify-center ">
-        <div class="h-screen w-full max-w-[1551px] px-8">
+        <div class="h-screen w-full max-w-[1551px] md:px-8">
             <!-- header -->
             <div class="flex justify-between items-center">
                 <a href="">
@@ -25,20 +25,22 @@
             </div>
             <!-- body -->
             <div class="bg-home1 bg-center bg-no-repeat h-[calc(100vh-110px)] flex items-center justify-center relative">
-                <img src="./assets/images/cloud-5-4.png" class="cloud_lt absolute -top-28 left-0 w-2/3  z-[60]" alt="" />
-                <img src="./assets/images/cloud-5-1.png" class="cloud_rt absolute -top-28 right-0 w-2/3  z-[60]" alt="" />
-                <img src="./assets/images/cloud-2-1.png" class="cloud_rt absolute bottom-0 z-[60]" alt="" />
-                <img src="./assets/images/cloud-3-1.png" class="cloud_lt absolute bottom-0 -left-10 z-[60] w-4/5" alt="" />
+                <img src="./assets/images/cloud-5-4.png" class="cloud_lt absolute -top-28 left-0 md:w-2/3 z-[60]" alt="" />
+                <img src="./assets/images/cloud-5-4.png" class="cloud_lt absolute top-[calc(50vh-230px)] left-0 md:w-2/3 z-[60] md:hidden" alt="" />
+                <img src="./assets/images/cloud-5-1.png" class="cloud_rt absolute md:-top-28 top-0 right-0 md:w-2/3  z-[60]" alt="" />
+                <img src="./assets/images/cloud-2-1.png" class="cloud_rt absolute bottom-28 md:bottom-0 z-[60]" alt="" />
+                <img src="./assets/images/cloud-3-1.png" class="cloud_lt absolute bottom-0 -left-10 z-[60] md:w-4/5" alt="" />
+                <img src="./assets/images/cloud-5-1.png" class="cloud_rt absolute right-0 bottom-[calc(50vh-130px)] md:hidden" alt="" />
 
-                <div class="absolute top-0 left-0 w-5/12">
-                    <img src="./assets/images/cloud-5-1.png" class="-scale-100 relative cloud-animation-1" alt="" />
+                <div class="absolute top-0 left-0 md:w-5/12">
+                    <img src="./assets/images/cloud-5-1.png" class="-scale-100 relative" alt="" />
                 </div>
-                <div class="text-center text-4xl relative z-50">
+                <div class="text-center text-3xl md:text-4xl relative z-50">
                     <h1>CONNECT YOUR ETHERUEM ACCOUNT <br /> TO ACCESS THE SHRINE</h1>
-                    <button class="connect_btn uppercase font-fam1 text-3xl bg-white text-black rounded-full px-10 py-2 my-10">connect your wallet</button>
+                    <button class="connect_btn uppercase font-fam1 text-2xl md:text-3xl bg-white text-black rounded-full px-10 py-2 my-10">connect your wallet</button>
                 </div>
-                <div class="absolute top-[calc(50vh-130px)] right-0 w-7/12">
-                    <img src="./assets/images/cloud-5-1.png" class="relative cloud-animation" alt="" />
+                <div class="absolute right-0 bottom-0 md:top-[50vh] lg:top-[calc(50vh-130px)] md:w-7/12">
+                    <img src="./assets/images/cloud-5-1.png" class="relative" alt="" />
                 </div>
             </div>
         </div>

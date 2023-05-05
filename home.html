@@ -18,7 +18,7 @@
 
 <body>
     <div class="flex justify-center ">
-        <div class="h-screen w-full max-w-[1551px] px-8">
+        <div class="h-screen w-full max-w-[1551px] md:px-8 px-3">
             <!-- header -->
             <div class="flex justify-between items-center">
                 <a href="">
@@ -35,8 +35,8 @@
 
             <!-- body -->
             <div class="h-[calc(100vh-110px)]">
-                <div class="flex">
-                    <div class="w-1/2 font-fam1 py-20 px-10 relative">
+                <div class="flex md:justify-between justify-center flex-wrap">
+                    <div class="w-full md:w-1/2 font-fam1 py-5 md:py-20 px-5 md:px-10 relative min-h-[550px]">
                         <img src="./assets/images/SHRINE1.png" class="opacity-20" alt="" />
                         <div class="absolute top-0 left-0 w-full h-full text-xl flex items-center z-50">
                             <div class="w-full my-auto">
@@ -49,7 +49,7 @@
                                     <div class="w-1/2 px-5">253,42 FACE1 Per Day</div>
                                 </div>
                                 <div class="flex justify-center">
-                                    <div class="my-10">
+                                    <div class="my-5 md:my-10">
                                         <button
                                             data-modal-target="stakeModal" data-modal-toggle="stakeModal"
                                             class="stake_btn bg-white text-black rounded-full px-5 mx-3">STAKE</button>
@@ -58,19 +58,19 @@
                                             class="unstake_btn bg-black text-white border border-[rgba(0, 0, 0, 0.71)] rounded-full px-5 mx-3">UNSTAKE</button>
                                     </div>
                                 </div>
-                                <div class="text-center bg-black w-1/3 mx-auto py-3 mt-20">
+                                <div class="text-center bg-black w-2/3 md:w-1/3 mx-auto py-3 mt-10 md:mt-20">
                                     <div>UNCLAIMED REWARDS</div>
                                     <div>12.3456 FACE1</div>
                                 </div>
                                 <div class="flex justify-center">
                                     <button
-                                        class="claim_btn uppercase font-fam1 text-3xl bg-white text-black rounded-full px-10 py-2 my-10">
+                                        class="claim_btn uppercase font-fam1 text-2xl md:text-3xl bg-white text-black rounded-full px-10 py-2 my-10">
                                         claim rewards</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-1/2 relative flex justify-end">
+                    <div class="w-full md:w-1/2 relative flex justify-end min-h-[550px]">
                         <img src="./assets/images/ninja-bg.png" class="absolute top-32 -left-32 scale-125" alt="" />
                         <div class="text-xl relative z-50">
                             <div class="font-fam1 uppercase mb-2">balance</div>
@@ -120,9 +120,9 @@
                 <div class="bg-bt-gradiant absolute bottom-0 left-0 w-full h-[calc(50vh-130px)]"></div>
                 <!-- message -->
                 <div class="message absolute bottom-0 left-0 z-50 flex justify-center w-full py-7 cursor-pointer hidden">
-                    <div class="flex items-center">
+                    <div class="flex items-center flex-wrap">
                         <div class="px-5 text-green-500"><span class="text-2xl">SUCCESS!</span> Reward Claimed</div>
-                        <div>Transaction Id: 1234567890wertyuiopasdfgjkllxcvbnm1234567890</div>
+                        <div class="break-words text-center text-sm md:text-lg max-w-[370px] md:max-w-full">Transaction Id: 1234567890wertyuiopasdfgjkllxcvbnm1234567890</div>
                     </div>
                 </div>
             </div>
@@ -132,28 +132,28 @@
                 class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div class="relative w-full max-w-2xl max-h-full">
                     <!-- Modal content -->
-                    <div class="relative shadow bg-modal w-[800px] h-[512px] flex items-center justify-center">
-                        <div class="w-2/3">
+                    <div class="relative shadow bg-modal lg:w-[800px] lg:h-[512px] flex items-center justify-center py-16">
+                        <div class="w-5/6 md:w-2/3">
                             <div class="text-right mb-3 font-fam1 text-xl">BALANCE   <span class="ml-5">12.393</span></div>
                             <div class="relative">
                                 <input type="number" class="bg-[#161111] border-0 h-[87px] text-2xl w-full font-fam1" value="0.0" />
                                 <div class="rounded-full w-[79px] h-[79px] bg-black flex justify-center items-center text-2xl absolute right-1 top-1 z-50">LP</div>
                             </div>
                             <div class="flex justify-around px-10 py-5">
-                                <button class="text-2xl">25%</button>
-                                <button class="text-2xl">50%</button>
-                                <button class="text-2xl">75%</button>
-                                <button class="text-2xl">MAX</button>
+                                <button class="text-xl md:text-2xl">25%</button>
+                                <button class="text-xl md:text-2xl">50%</button>
+                                <button class="text-xl md:text-2xl">75%</button>
+                                <button class="text-xl md:text-2xl">MAX</button>
                             </div>
                             <div class="flex justify-center">
                                 <button
-                                    class="modal_btn uppercase font-fam1 text-3xl bg-white text-black rounded-full px-10 py-2">
+                                    class="modal_btn uppercase font-fam1 text-2xl lg:text-3xl bg-white text-black rounded-full px-10 py-2">
                                     UNSTAKE</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-name uppercase text-8xl absolute bottom-10 left-10">STAKE</div>
+                <div class="modal-name uppercase text-6xl lg:text-8xl absolute bottom-10 lg:left-10">STAKE</div>
             </div>
 
         </div>

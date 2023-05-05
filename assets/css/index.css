@@ -112,11 +112,12 @@ button {
 }
 
 /* landing page */
-.sound-btn{
+.sound-btn {
     cursor: pointer !important;
     z-index: 999999999999999 !important;
 }
-.sound-btn:hover{
+
+.sound-btn:hover {
     scale: 1.25;
     transition-duration: 500ms;
 }
@@ -163,17 +164,19 @@ button {
     background-size: 100% 100%;
 }
 
-footer{
+footer {
     font-family: abel;
 }
 
 .blood-splatter {
     animation: splat 0.1s ease-in-out forwards;
 }
+
 @keyframes splat {
     0% {
         scale: 3;
     }
+
     100% {
         opacity: 1.25;
     }
@@ -248,20 +251,22 @@ footer{
 
 
 /*splash*/
-.bg-home1{
+.bg-home1 {
     background: url("../images/home1.png");
 }
-.bg-bt-gradiant{
+
+.bg-bt-gradiant {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 56.77%);
 }
-.bg-modal{
+
+.bg-modal {
     background: url("../images/Vector-7.png");
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 }
 
-[type=number]:focus{
-    box-shadow:none !important;
+[type=number]:focus {
+    box-shadow: none !important;
 }
 
 .color-changer {
@@ -273,47 +278,52 @@ footer{
     0% {
         color: #fff;
     }
+
     50% {
         color: green;
     }
+
     100% {
         color: #fff;
     }
 }
 
-.cloud_lt{
-    animation-name: fadeInRight,hide;
+.cloud_lt {
+    animation-name: fadeInRight, hide;
     animation-duration: 1s;
-    animation-delay: 0s,3s;
+    animation-delay: 0s, 3s;
     animation-fill-mode: both;
 }
+
 @keyframes fadeInRight {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  @keyframes hide {
-    100% {
-      opacity: 0;
-      transform: translate3d(-800px, 0, 0);
-    }
-  }
+}
 
-  
-.cloud_rt{
-    animation-name: fadeInLeft,rt_hide;
+@keyframes hide {
+    100% {
+        opacity: 0;
+        transform: translate3d(-800px, 0, 0);
+    }
+}
+
+.cloud_rt {
+    animation-name: fadeInLeft, rt_hide;
     animation-duration: 1s;
-    animation-delay: 0s,3s;
+    animation-delay: 0s, 3s;
     animation-fill-mode: both;
 }
+
 @keyframes fadeInLeft {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  @keyframes rt_hide {
+}
+
+@keyframes rt_hide {
     100% {
-      opacity: 0;
-      transform: translate3d(1300px, 0, 0);
+        opacity: 0;
+        transform: translate3d(1300px, 0, 0);
     }
-  }
+}
